@@ -1,0 +1,66 @@
+<?php
+namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use Input;
+use App\**CLASS**;
+class **CLASS**Controller extends Controller
+{
+    //
+    private $error = 
+        [
+            'error' => 'Error', 
+            'message' => 'Um erro foi encontrado, verifique os campos e parâmetros passados'
+        ];
+    private $success = [
+        'success' => 'success' 
+    ];
+
+    public function get**CLASS**($id = null){
+        if(!empty($id)){
+            return json_encode(**CLASS**::find($id), JSON_PRETTY_PRINT);
+        }
+        return json_encode(**CLASS**::all(), JSON_PRETTY_PRINT);
+    }
+
+    public function store**CLASS**(Request $r ,$id = null){
+        
+        try{
+            if(!empty($id)){
+                $**TABLE** = **CLASS**::find($id);
+            }else{
+                $**TABLE** = new **CLASS**();
+            }
+
+            **CAMPOS**            
+
+            $**TABLE**->save();
+            return json_encode($this->success , JSON_PRETTY_PRINT);
+        }catch(Exception $e){
+            return json_encode($this->error, JSON_PRETTY_PRINT);
+        }
+    }
+
+    public function delete**CLASS**($id){
+        try{
+            **CLASS**::destroy($id);
+            return json_encode($this->success , JSON_PRETTY_PRINT);
+        }catch(Exception $e){
+            return json_encode($this->error, JSON_PRETTY_PRINT);
+        }
+    }
+
+    /*
+    public function getProdutosByFiltro(Request $r){
+        try{
+            $produtos = Produto::where(function ($query) use($r) {
+                        $query->orWhere('product_name', 'like', "%".$r->product_name."%")
+                        ->orWhere('product_description', 'like', "%".$r->product_description."%");
+            })->get();
+           
+            return json_encode($produtos, JSON_PRETTY_PRINT);
+        }catch(Exception $e){
+            return json_encode($this->error, JSON_PRETTY_PRINT);
+        }
+    }
+    */
+}
