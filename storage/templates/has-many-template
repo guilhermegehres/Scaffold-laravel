@@ -1,0 +1,6 @@
+public function **TABLE**()
+{
+    return $this->hasMany('App\**CLASS**'/*, 'id_**TABLE**'*/);
+}
+
+//**HASMANY**

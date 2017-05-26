@@ -1,5 +1,12 @@
+
+//CRUD para entidade '**TABLE**' do banco
+//Seu respectivo controller é '**CLASS**Controller'
+//Seu respectivo model é '**CLASS**'
+
 Route::get('/**TABLE**/{id?}', ['alias' => '/**TABLE**' , 'uses' => '**CLASS**Controller@get**CLASS**']);
 Route::post('/**TABLE**', ['alias' => '/**TABLE**' , 'uses' => '**CLASS**Controller@store**CLASS**']);
 Route::post('/**TABLE**/update/{id}', ['alias' => '/**TABLE**' , 'uses' => '**CLASS**Controller@store**CLASS**']);
 Route::post('/**TABLE**/filtro', ['alias' => '/**TABLE**' , 'uses' => '**CLASS**Controller@get**CLASS**ByFiltro']);
 Route::delete('/**TABLE**/{id}', ['alias' => '/**TABLE**' , 'uses' => '**CLASS**Controller@delete**CLASS**']);
+
+//**ROTAS**

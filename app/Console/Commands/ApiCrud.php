@@ -13,7 +13,7 @@ class ApiCrud extends Command
      *
      * @var string
      */
-    protected $signature = 'command:apiCrud {table}';
+    protected $signature = 'apiCrud {table} {is_routed?}';
 
     /**
      * The console command description.
@@ -40,7 +40,11 @@ class ApiCrud extends Command
     public function handle()
     {
         //
+        $ignore = [
+            "id_",
+            "is_"
+        ];
         $scaf = new Scaffold();
-        $scaf->generateCrud($this->argument('table'));
+        $scaf->generateCrud($this->argument('table'), $ignore);
     }
 }

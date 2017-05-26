@@ -1,0 +1,6 @@
+public function **CLASS**()
+{
+    return $this->belongsTo('App\**CLASS**', 'id_**TABLE**');
+}
+
+//**BELONGSTO**

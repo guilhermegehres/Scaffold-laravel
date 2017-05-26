@@ -17,4 +17,39 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
 
+
+
+
+//CRUD para entidade 'produtos' do banco
+//Seu respectivo controller é 'ProdutosController'
+//Seu respectivo model é 'Produtos'
+
+Route::get('/produtos/{id?}', ['alias' => '/produtos' , 'uses' => 'ProdutosController@getProdutos']);
+Route::post('/produtos', ['alias' => '/produtos' , 'uses' => 'ProdutosController@storeProdutos']);
+Route::post('/produtos/update/{id}', ['alias' => '/produtos' , 'uses' => 'ProdutosController@storeProdutos']);
+Route::post('/produtos/filtro', ['alias' => '/produtos' , 'uses' => 'ProdutosController@getProdutosByFiltro']);
+Route::delete('/produtos/{id}', ['alias' => '/produtos' , 'uses' => 'ProdutosController@deleteProdutos']);
+
+
+//CRUD para entidade 'produtos' do banco
+//Seu respectivo controller é 'ProdutosController'
+//Seu respectivo model é 'Produtos'
+
+Route::get('/produtos/{id?}', ['alias' => '/produtos' , 'uses' => 'ProdutosController@getProdutos']);
+Route::post('/produtos', ['alias' => '/produtos' , 'uses' => 'ProdutosController@storeProdutos']);
+Route::post('/produtos/update/{id}', ['alias' => '/produtos' , 'uses' => 'ProdutosController@storeProdutos']);
+Route::post('/produtos/filtro', ['alias' => '/produtos' , 'uses' => 'ProdutosController@getProdutosByFiltro']);
+Route::delete('/produtos/{id}', ['alias' => '/produtos' , 'uses' => 'ProdutosController@deleteProdutos']);
+
+
+//CRUD para entidade 'produtos' do banco
+//Seu respectivo controller é 'ProdutosController'
+//Seu respectivo model é 'Produtos'
+
+Route::get('/produtos/{id?}', ['alias' => '/produtos' , 'uses' => 'ProdutosController@getProdutos']);
+Route::post('/produtos', ['alias' => '/produtos' , 'uses' => 'ProdutosController@storeProdutos']);
+Route::post('/produtos/update/{id}', ['alias' => '/produtos' , 'uses' => 'ProdutosController@storeProdutos']);
+Route::post('/produtos/filtro', ['alias' => '/produtos' , 'uses' => 'ProdutosController@getProdutosByFiltro']);
+Route::delete('/produtos/{id}', ['alias' => '/produtos' , 'uses' => 'ProdutosController@deleteProdutos']);
+
 //**ROTAS**

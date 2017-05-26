@@ -5,5 +5,13 @@ class **CLASS** extends Model
 {
     //
     protected $table = '**TABLE**';
+
+//Lista de BelongsTo de **TABLE**
+
+//**BELONGSTO**
+
+//Lista de HasMany de **TABLE**
+
+//**HASMANY**
     
 }
